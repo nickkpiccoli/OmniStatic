@@ -11,4 +11,4 @@ void printPdfBanner();
 
 void printOfficeBanner();
 
-void printDocTypeMenu();
+
