@@ -29,7 +29,7 @@ void performExeAnalysis(){
         printExeBanner();
         cout << GREEN << "Analyzing file: " << RESET << filename << endl;
         printExeMenu();
-        cout << GREEN << "your choice:" << RESET;
+        cout << GREEN << "your choice: " << RESET;
         cin >> choice;
         cin.ignore();
         switch (choice)
@@ -38,8 +38,10 @@ void performExeAnalysis(){
                 stringsTool(filename);
                 break;
             case 2:
+                objdumpTool(filename);
                 break;
             case 3:
+                readelfTool(filename);
                 break;
             case 4:
                 break;

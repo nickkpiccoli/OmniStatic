@@ -22,7 +22,7 @@ int main() {
         system("clear");
         printMainBanner();
         printDocTypeMenu();
-        cout << GREEN << "your choice:" << RESET;
+        cout << GREEN << "your choice: " << RESET;
         cin >> choice;
 
         switch (choice)

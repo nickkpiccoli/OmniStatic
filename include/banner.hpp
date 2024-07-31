@@ -13,4 +13,8 @@ void printOfficeBanner();
 
 void printStringsBanner();
 
+void printObjBanner();
+
+void printReadelfBanner();
+
 
