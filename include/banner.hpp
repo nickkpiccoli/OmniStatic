@@ -11,4 +11,6 @@ void printPdfBanner();
 
 void printOfficeBanner();
 
+void printStringsBanner();
+
 

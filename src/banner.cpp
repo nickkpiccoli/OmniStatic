@@ -92,3 +92,22 @@ void printOfficeBanner(){
     }
 
 }
+
+void printStringsBanner(){
+    system("clear");
+    std::vector<std::string> asciiArtLines = {
+        "   _____ _        _                 ",
+        "  / ____| |      (_)                ",
+        " | (___ | |_ _ __ _ _ __   __ _ ___ ",
+        "  \\___ \\| __| '__| | '_ \\ / _` / __|",
+        "  ____) | |_| |  | | | | | (_| \\__ \\",
+        " |_____/ \\__|_|  |_|_| |_|\\__, |___/",
+        "                           __/ |    ",
+        "                          |___/     "
+    };
+
+    for (const auto& line : asciiArtLines) {
+        std::cout << BLUE << centerText(line) << RESET << std::endl;
+    }
+
+}
