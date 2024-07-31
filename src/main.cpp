@@ -3,9 +3,10 @@
 #include <vector>
 #include <chrono>
 #include <thread>
-#include "colors.hpp"
 #include "banner.hpp"
+#include "colors.hpp"
 #include "menu.hpp"
+#include "exeAnalysis.hpp"
 
 using namespace std;
 
@@ -27,8 +28,7 @@ int main() {
         switch (choice)
         {
             case 1:
-                printExeBanner();
-                sleep(2000);
+                performExeAnalysis();
                 break;
             case 2:
                 printPdfBanner();
