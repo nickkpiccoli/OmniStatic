@@ -98,3 +98,36 @@ void readelfTool(const string& filename){
     cout << RED << "Press Enter to continue..." << RESET << endl;
     cin.get();
 }
+
+void nmTool(const string& filename){
+    system("clear");
+    printNmBanner();
+    cout << GREEN << "Executing nm..." << RESET << endl;
+    string command = "nm " + filename;
+    this_thread::sleep_for(chrono::milliseconds(500));
+    system(command.c_str());
+    cout << RED << "Press Enter to continue..." << RESET << endl;
+    cin.get();
+}
+
+void fileTool(const string& filename){
+    system("clear");
+    printFileBanner();
+    cout << GREEN << "Executing file..." << RESET << endl;
+    string command = "file " + filename;
+    this_thread::sleep_for(chrono::milliseconds(500));
+    system(command.c_str());
+    cout << RED << "Press Enter to continue..." << RESET << endl;
+    cin.get();
+}
+
+void xxdTool(const string& filename){
+    system("clear");
+    printXxdBanner();
+    cout << GREEN << "Executing xxd..." << RESET << endl;
+    string command = "xxd " + filename;
+    this_thread::sleep_for(chrono::milliseconds(500));
+    system(command.c_str());
+    cout << RED << "Press Enter to continue..." << RESET << endl;
+    cin.get();
+}

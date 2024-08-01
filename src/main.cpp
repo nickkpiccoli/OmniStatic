@@ -28,6 +28,7 @@ int main() {
         switch (choice)
         {
             case 1:
+                //TODO ADD FILE SAVING AND OPTIONAL PARAMETERS IN NO PARAMETERS TOOLS 
                 performExeAnalysis();
                 break;
             case 2:

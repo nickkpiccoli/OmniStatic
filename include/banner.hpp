@@ -17,4 +17,8 @@ void printObjBanner();
 
 void printReadelfBanner();
 
+void printNmBanner();
 
+void printFileBanner();
+
+void printXxdBanner();

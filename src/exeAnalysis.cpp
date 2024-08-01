@@ -44,10 +44,13 @@ void performExeAnalysis(){
                 readelfTool(filename);
                 break;
             case 4:
+                nmTool(filename);
                 break;
             case 5:
+                fileTool(filename);
                 break;
             case 6:
+                xxdTool(filename);
                 break;
             case 7:
                 system("clear");

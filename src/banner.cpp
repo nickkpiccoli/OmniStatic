@@ -149,3 +149,60 @@ void printReadelfBanner(){
     }
 
 }
+
+void printNmBanner(){
+    system("clear");
+    std::vector<std::string> asciiArtLines =  {
+        "  _   _           ",
+        " | \\ | |          ",
+        " |  \\| |_ __ ___  ",
+        " | . ` | '_ ` _ \\ ",
+        " | |\\  | | | | | |",
+        " |_| \\_|_| |_| |_|",
+        "                  ",
+        "                  "
+    };
+
+    for (const auto& line : asciiArtLines) {
+        std::cout << BLUE << centerText(line) << RESET << std::endl;
+    }
+
+}
+
+void printFileBanner(){
+    system("clear");
+    std::vector<std::string> asciiArtLines = {
+        "  ______ _ _      ",
+        " |  ____(_) |     ",
+        " | |__   _| | ___ ",
+        " |  __| | | |/ _ \\",
+        " | |    | | |  __/",
+        " |_|    |_|_|\\___|",
+        "                  ",
+        "                  "
+    };
+
+    for (const auto& line : asciiArtLines) {
+        std::cout << BLUE << centerText(line) << RESET << std::endl;
+    }
+
+}
+
+void printXxdBanner(){
+    system("clear");
+    std::vector<std::string> asciiArtLines = {
+        " __   __         _ ",
+        " \\ \\ / /        | |",
+        "  \\ V / __  ____| |",
+        "   > <  \\ \\/ / _` |",
+        "  / . \\  >  < (_| |",
+        " /_/ \\_\\/_/\\_\\__,_|",
+        "                   ",
+        "                   "
+    };
+
+    for (const auto& line : asciiArtLines) {
+        std::cout << BLUE << centerText(line) << RESET << std::endl;
+    }
+
+}
