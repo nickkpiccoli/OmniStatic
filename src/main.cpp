@@ -1,31 +1,30 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <chrono>
-#include <thread>
 #include "banner.hpp"
 #include "colors.hpp"
 #include "menu.hpp"
 #include "exeAnalysis.hpp"
+#include "utils.hpp"
 
 using namespace std;
 
-void sleep(int milliseconds) {
-    std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
-}
-
 int main() {
-    int choice;
+    string choice;
+    int convertedChoice;
     
 
     do{
-        system("clear");
-        printMainBanner();
-        printDocTypeMenu();
-        cout << GREEN << "your choice: " << RESET;
-        cin >> choice;
+        do{
+            system("clear");
+            printMainBanner();
+            printDocTypeMenu();
+            cout << GREEN << "your choice: " << RESET;
+            cin >> choice;
+            convertedChoice = checkInput(choice);
+        }while(convertedChoice == 0);
 
-        switch (choice)
+        switch (convertedChoice)
         {
             case 1:
                 //TODO ADD FILE SAVING AND OPTIONAL PARAMETERS IN NO PARAMETERS TOOLS 
@@ -50,7 +49,7 @@ int main() {
                 break;
         }
 
-    }while(choice != 4);
+    }while(convertedChoice != 4);
     
     return 0;
 }
