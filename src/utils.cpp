@@ -3,6 +3,7 @@
 #include <thread>
 #include <string>
 #include "colors.hpp"
+#include "banner.hpp"
 
 using namespace std;
 
@@ -41,4 +42,45 @@ string clearString(const string& str) {
         return "";
     size_t last = str.find_last_not_of(" \n\r\t\f\v");
     return str.substr(first, (last - first + 1));
+}
+
+string checkRequiredParam(string toolname){
+    string choice;
+    int convertedChoice;
+    string cmd = toolname + " -H";
+    string parameters;
+    do{
+        do{
+            system("clear");
+            printObjBanner();
+            cout << GREEN << "To use " << toolname << " you need to specify at least one parameter." << RESET << endl;
+            cout << CYAN << "1) Print parameters help" << RESET << endl;
+            cout << CYAN << "2) Insert paramters and execute " << toolname << RESET << endl;
+            cout << GREEN << "your choice: " << RESET;
+            cin >> choice;
+            convertedChoice = checkInput(choice);
+        }while(convertedChoice == 0);
+
+        if(convertedChoice == 1){
+            system(cmd.c_str());
+            cout << RED << "Press Enter to continue..." << RESET << endl;
+            cin.get();
+            cin.ignore();
+        }
+        if(convertedChoice != 1 && convertedChoice != 2){
+            cout << RED << "Invalid Choice. Try again." << RESET << endl;
+            sleep(500);
+        }
+    }while(convertedChoice != 2);
+    cin.ignore();
+    system("clear");
+    printObjBanner();
+    cout << GREEN << "Insert parameters as -> -shortform -shortform.... : " << RESET;
+    getline(cin, parameters);
+
+    return parameters;
+}
+
+string checkOptionalParam(string filename){
+
 }
