@@ -22,3 +22,7 @@ void printNmBanner();
 void printFileBanner();
 
 void printXxdBanner();
+
+void printPdfinfoBanner();
+
+void printExiftoolBanner();

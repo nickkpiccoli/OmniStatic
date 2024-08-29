@@ -17,6 +17,7 @@ void stringsTool(const string& filename){
     string command = "strings " + filename;
     sleep(500);
     system(command.c_str());
+    cin.ignore();
     cout << RED << "Press Enter to continue..." << RESET << endl;
     cin.get();
 }
@@ -59,6 +60,7 @@ void nmTool(const string& filename){
     string command = "nm " + filename;
     sleep(500);
     system(command.c_str());
+    cin.ignore();
     cout << RED << "Press Enter to continue..." << RESET << endl;
     cin.get();
 }
@@ -70,6 +72,7 @@ void fileTool(const string& filename){
     string command = "file " + filename;
     sleep(500);
     system(command.c_str());
+    cin.ignore();
     cout << RED << "Press Enter to continue..." << RESET << endl;
     cin.get();
 }
@@ -81,6 +84,7 @@ void xxdTool(const string& filename){
     string command = "xxd " + filename;
     sleep(500);
     system(command.c_str());
+    cin.ignore();
     cout << RED << "Press Enter to continue..." << RESET << endl;
     cin.get();
 }

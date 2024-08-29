@@ -1,25 +1,30 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <chrono>
+#include <thread>
 #include "banner.hpp"
 #include "colors.hpp"
 #include "menu.hpp"
-#include "exeAnalysis.hpp"
-#include "pdfAnalysis.hpp"
+#include "pdfTools.hpp"
 #include "utils.hpp"
 
 using namespace std;
 
-int main() {
+void performPdfAnalysis(){
+    string filename = "";
     string choice;
     int convertedChoice;
-    
-
+    printPdfBanner();
+    cout << GREEN << "Insert filename of the pdf to be analyzed(.pdf included): " << RESET;
+    cin >> filename;
+    filename = clearString(filename);
     do{
         do{
             system("clear");
-            printMainBanner();
-            printDocTypeMenu();
+            printPdfBanner();
+            cout << GREEN << "Analyzing file: " << RESET << filename << endl;
+            printPdfMenu();
             cout << GREEN << "your choice: " << RESET;
             cin >> choice;
             convertedChoice = checkInput(choice);
@@ -28,30 +33,17 @@ int main() {
         switch (convertedChoice)
         {
             case 1:
-                //TODO ADD FILE SAVING AND OPTIONAL PARAMETERS IN NO PARAMETERS TOOLS 
-                performExeAnalysis();
+                pdfinfoTool(filename);
                 break;
             case 2:
-                performPdfAnalysis();
-                /*printPdfBanner();
-                sleep(2000);*/
+                exiftoolTool(filename);
                 break;
             case 3:
-                /*printOfficeBanner();
-                sleep(2000);*/
-                break;
-            case 4:
                 system("clear");
-                cout << GREEN << "Exiting..." << RESET << endl;
-                sleep(1000);
                 break;
             default:
                 cout << RED << "Invalid Choice. Try again." << RESET << endl;
-                sleep(1000);
                 break;
         }
-
-    }while(convertedChoice != 4);
-    
-    return 0;
+    }while(convertedChoice != 3);
 }
