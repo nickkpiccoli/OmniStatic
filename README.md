@@ -3,15 +3,16 @@
 OmniStatic is a command-line tool designed to consolidate multiple static analysis utilities into one place. It's a tool primarily aimed at analyzing executables on Linux, with planned support for PDF and Office document analysis in the future. The goal is to streamline the use of various command-line tools and make static analysis easier for cybersecurity professionals.
 
 ## Features
-
 - **Analyze Executables:** Use tools like `strings`, `objdump`, `file`, `readelf`, and more to analyze binary executables.
 - **Analyze PDFs:** Utilize tools such as `pdfinfo` and `exiftool` for static PDF analysis.
 - **User-Friendly CLI:** Simple, easy-to-navigate command-line interface.
 - **Extensible:** Future support for static analysis of Office documents.
 
+**Note**: OmniStatic is still in development and many features are yet to be implemented. As soon as my academic workload eases, I will continue to add new features and improvements. 
+
 ## Integrated Tools
 
-OmniStatic integrates the following tools, which are either built into Ubuntu or require minimal installation. Where applicable, the creators and maintainers of these tools are acknowledged:
+OmniStatic integrates the following tools, which are either built into Ubuntu or require minimal installation.
 
 ### Executable Analysis Tools:
 - **`strings`** – Extract printable strings from binaries. Part of the GNU Binutils package, maintained by the [GNU Project](https://www.gnu.org/software/binutils/).
@@ -19,7 +20,8 @@ OmniStatic integrates the following tools, which are either built into Ubuntu or
 - **`file`** – Determine file type. Created by Ian Darwin, and now maintained by [Christos Zoulas](https://github.com/file/file).
 - **`readelf`** – Display ELF file headers. Another tool from the [GNU Binutils](https://www.gnu.org/software/binutils/).
 - **`nm`** – List symbols from object files, included in the GNU Binutils package by the [GNU Project](https://www.gnu.org/software/binutils/).
-- **`lsof`** – List open files. Originally written by Victor A. Abell, currently maintained as an open-source project by the community.
+- **`xxd`** – Create a hex dump of a given file or convert a hex dump back to its binary form. Part of the `vim-common` package, maintained by the [Vim Project](https://www.vim.org/).
+
 
 ### PDF Analysis Tools:
 - **`pdfinfo`** – Extract metadata and document structure information from PDFs. Part of the [Poppler PDF Utilities](https://poppler.freedesktop.org/).
