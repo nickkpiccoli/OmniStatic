@@ -4,7 +4,7 @@
 void printDocTypeMenu(){
     cout << GREEN << "Select a document type to be analyzed:" << RESET << endl;
     cout << RED << "1) Executable file" << RESET << endl;
-    cout << RED << "2) Pdf file -- soon available" << RESET << endl;
+    cout << RED << "2) Pdf file" << RESET << endl;
     cout << RED << "3) Office file -- soon available" << RESET << endl;
     cout << CYAN << "4) Exit" << RESET << endl;
 }
@@ -21,7 +21,6 @@ void printExeMenu(){
 }
 
 void printPdfMenu(){
-    cout << RED << "Soon available " << RESET;
     cout << GREEN << "Select the tool to analyze your pdf:" << RESET << endl;
     cout << RED << "1) Pdfinfo" << RESET << endl;
     cout << RED << "2) Exiftool" << RESET << endl;

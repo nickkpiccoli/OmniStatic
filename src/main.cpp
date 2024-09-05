@@ -33,12 +33,10 @@ int main() {
                 break;
             case 2:
                 performPdfAnalysis();
-                /*printPdfBanner();
-                sleep(2000);*/
                 break;
             case 3:
-                /*printOfficeBanner();
-                sleep(2000);*/
+                printOfficeBanner();
+                sleep(2000);
                 break;
             case 4:
                 system("clear");
