@@ -1,6 +1,6 @@
 # OmniStatic
 
-OmniStatic is a command-line tool designed to consolidate multiple static analysis utilities into one place. It's a tool primarily aimed at analyzing executables on Linux, with planned support for PDF and Office document analysis in the future. The goal is to streamline the use of various command-line tools and make static analysis easier for cybersecurity professionals.
+OmniStatic is a command-line tool designed to consolidate multiple static analysis utilities into one place. It's a tool primarily aimed at analyzing executables on Linux, with planned support for Office document analysis in the future. The goal is to streamline the use of various command-line tools and make static analysis easier for cybersecurity professionals.
 
 ## Features
 - **Analyze Executables:** Use tools like `strings`, `objdump`, `file`, `readelf`, and more to analyze binary executables.
