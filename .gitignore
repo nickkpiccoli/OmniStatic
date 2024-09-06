@@ -1,5 +1,6 @@
 .vscode/
 src\main
+src\omnistatic
 .mgc
 *.pdf
 *.mgc
