@@ -61,6 +61,6 @@ To use `omnistatic` from any directory, add the directory containing the `yourpa
 4. **Reload**
     ```bash
     source ~/.bashrc
-5. Now you can run omnistatic from any directory in your terminal using:
+5. Now(atfer you have compiled) you can run omnistatic from any directory in your terminal using:
     ```bash
     omnistatic
