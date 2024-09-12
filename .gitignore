@@ -7,3 +7,5 @@ src\omnistatic
 *.mgc
 build/
 build\
+CMakeCache.txt
+CMakeFiles/
