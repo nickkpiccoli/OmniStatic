@@ -34,21 +34,20 @@ OmniStatic integrates the following tools, which are either built into Ubuntu or
 
 ### Compiling OmniStatic
 
-To compile OmniStatic, use the `compile.sh` script located in `omnistatic/src` directory. This script is configured for the Clang compiler but can be modified to suit your preferred compiler.
-
-1. **Navigate to the `src` Directory**:
-
+To run OmniStatic, use the `build.sh` script located in the `yourpath/omnistatic` directory. This script will create the build directory and run CMake using the `CMakeLists.txt` file. The default compiler specified in CMakeLists.txt is `clang++`, but you can change it to your preferred compiler if needed.
+1. **Navigate to the main Directory**:
    ```bash
-   cd yourpath/omnistatic/src
-2. **Run script** using 
+   cd yourpath/omnistatic/
+2. **Run build script using**: 
    ```bash
-   bash compile.sh
-3. **Run Omnistatic**: now you can run omnistatic with:
+   bash build.sh
+3. **Navigate to build Directory and Run Omnistatic:**:
    ```bash
+   cd build
    ./omnistatic
 ### Adding OmniStatic to Your PATH
 
-To use `omnistatic` from any directory, add the directory containing the `yourpath/omnistatic/src` executable to your `PATH` environment variable. Follow these steps:
+To use `omnistatic` from any directory, add the directory `yourpath/omnistatic/build` to your `PATH` environment variable. Follow these steps:
 1. **Edit `.bashrc`** (or `.zshrc` if you use Zsh):
 
    ```bash
@@ -56,7 +55,7 @@ To use `omnistatic` from any directory, add the directory containing the `yourpa
 2. *Add* your path: 
 
     ```bash
-    export PATH=$PATH:yourpath/omnistatic/src
+    export PATH=$PATH:yourpath/omnistatic/build
 3. **Save and Close** If using nano, press CTRL + O to save and CTRL + X to exit.
 4. **Reload**
     ```bash
