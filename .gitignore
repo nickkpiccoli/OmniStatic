@@ -5,3 +5,5 @@ src\omnistatic
 .mgc
 *.pdf
 *.mgc
+build/
+build\
